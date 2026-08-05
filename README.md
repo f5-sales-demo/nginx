@@ -22,7 +22,7 @@ F5 XC NGINX integration and configuration
 
 ## Documentation
 
-Full documentation is available at **[https://f5-sales-demo.github.io/nginx/](https://f5-sales-demo.github.io/nginx/)**.
+Full documentation is available at __[https://f5-sales-demo.github.io/nginx/](https://f5-sales-demo.github.io/nginx/)__.
 
 ## Contributing
 
