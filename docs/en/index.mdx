@@ -1,11 +1,44 @@
 ---
-title: NGINX
-description: NGINX integration and configuration management for F5 Distributed Cloud.
-hero:
-  tagline: NGINX integration and configuration management.
-  image:
-    html: '<img src="/nginx/images/hero.svg" alt="F5 XC NGINX" />'
-sidebar:
-  hidden: true
-  order: 0
+title: NGINX One Console Integration
+description: Centralized visibility, configuration management, and App Protect security for NGINX instances.
 ---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+The **NGINX One** integration connects distributed NGINX Plus and NGINX Open Source instances to the F5 Distributed Cloud console, providing centralized fleet visibility, certificate management, and configuration synchronization.
+
+## Architecture
+
+```text
++-------------------------------------------------------------------------+
+|                     NGINX One Control Plane Hierarchy                   |
+|                                                                         |
+|  +-------------------------------------------------------------------+  |
+|  | F5 Distributed Cloud Console: Fleet Overview & Analytics          |  |
+|  +---------------------------------+---------------------------------+  |
+|                                    |                                    |
+|              gRPC / TLS Telemetry & Management Channel                  |
+|                                    |                                    |
+|         +--------------------------+--------------------------+         |
+|         |                                                     |         |
+|         v                                                     v         |
+|  +-----------------------------+               +---------------------+  |
+|  | NGINX Plus Instance A       |               | NGINX Plus Instance |  |
+|  | (NGINX Agent Subprocess)    |               | (App Protect WAF)   |  |
+|  +-----------------------------+               +---------------------+  |
++-------------------------------------------------------------------------+
+```
+
+## Key Capabilities
+
+<CardGrid>
+  <Card title="Instance Fleet Inventory" icon="laptop">
+    Real-time status, NGINX software versions, OS distributions, and CVE exposure tracking.
+  </Card>
+  <Card title="Certificate Lifecycle" icon="seti:lock">
+    Monitor SSL/TLS certificate expirations and automate certificate updates across instances.
+  </Card>
+  <Card title="App Protect Synchronization" icon="seti:shield">
+    Distribute unified WAF and DoS security policies across hybrid NGINX data planes.
+  </Card>
+</CardGrid>
